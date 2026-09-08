@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Personal Assistant</title>
+<style>
+  :root {
+    --bg: #fdfdfc;
+    --fg: #1c1b1a;
+    --muted: #57534e;
+    --rule: #e7e5e4;
+    --link: #2563eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1b1a;
+      --fg: #f5f4f2;
+      --muted: #a8a29e;
+      --rule: #3a3735;
+      --link: #7ba7f5;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .4rem; letter-spacing: -.02em; }
+  .sub { color: var(--muted); margin: 0 0 2.5rem; }
+  h2 { font-size: 1.1rem; margin: 2.5rem 0 .6rem; letter-spacing: -.01em; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  a { color: var(--link); }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: .95rem; }
+  th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted); font-size: .9rem;
+  }
+  footer a { margin-right: 1.2rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="sub">Personal Assistant · Last updated 7 September 2026</p>
+
+  <p>
+    Personal Assistant is a private application with a single user: its owner. It is not
+    offered as a service to anyone else and does not accept sign-ups. This policy describes
+    what it accesses, where that data goes, and how long it is kept.
+  </p>
+
+  <h2>Information accessed</h2>
+  <p>With the owner's explicit Google authorization, the application accesses:</p>
+  <table>
+    <tr><th>Data</th><th>Access</th><th>Purpose</th></tr>
+    <tr>
+      <td>Google Calendar events</td>
+      <td>Read</td>
+      <td>Answering questions about the schedule; building the daily summary</td>
+    </tr>
+    <tr>
+      <td>Google Tasks</td>
+      <td>Read, and write when explicitly requested</td>
+      <td>Showing what is due; creating and completing tasks on request</td>
+    </tr>
+  </table>
+  <p>
+    No other Google data is accessed. The application does not request access to Gmail,
+    Contacts, Drive, Photos, or location history.
+  </p>
+  <p>
+    It also stores the conversations the owner has with it, and a log of every action it
+    takes.
+  </p>
+
+  <h2>Where data is stored</h2>
+  <p>
+    All stored data lives in the owner's own private Amazon Web Services account, in the US
+    East (Ohio) region. It is encrypted at rest using a customer-managed encryption key
+    controlled by the owner. There is no other copy, and no other person has access.
+  </p>
+
+  <h2>Third-party processing</h2>
+  <p>
+    Two services process data on the owner's behalf. Neither is given data for its own
+    purposes.
+  </p>
+  <ul>
+    <li>
+      <strong>Amazon Web Services</strong> — hosts the application and stores its data.
+      Calendar events, task titles, and conversation content are sent to
+      <strong>Amazon Bedrock</strong>, AWS's model-hosting service, to generate answers and
+      the daily summary. Processing is restricted to AWS regions within the United States.
+    </li>
+    <li>
+      <strong>Open-Meteo</strong> — queried for weather forecasts. It receives an
+      approximate location and no personal data.
+    </li>
+  </ul>
+  <p>
+    Data is not sold, rented, shared for advertising, or used to train any model. The
+    application contains no analytics, tracking, cookies, or advertising of any kind.
+  </p>
+
+  <h2>How long data is kept</h2>
+  <ul>
+    <li><strong>Conversations</strong> — deleted automatically after 90 days.</li>
+    <li><strong>Action log</strong> — a record of each action taken, kept for 5 years so past activity can be reviewed.</li>
+    <li><strong>Daily summaries</strong> — kept until deleted by the owner.</li>
+    <li><strong>Google data</strong> — read on demand and used to answer the request at hand. Calendar events are not copied into long-term storage; task and event details may appear inside stored conversations and the action log, and are removed with them.</li>
+  </ul>
+
+  <h2>Revoking access</h2>
+  <p>
+    The owner can revoke this application's access to their Google account at any time from
+    <a href="https://myaccount.google.com/permissions">Google Account permissions</a>.
+    Revoking access immediately stops all further reading of calendar and task data. Stored
+    conversations and logs can be deleted directly from the owner's AWS account.
+  </p>
+
+  <h2>Security</h2>
+  <p>
+    Access requires signing in. Data is encrypted in transit and at rest. Any action that
+    changes calendar or task data as a result of the assistant's own suggestion requires
+    explicit confirmation before it runs, and every action is recorded in the action log.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    The application is not directed at children and has no users other than its adult owner.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    Material changes will be reflected on this page with an updated date above.
+  </p>
+
+  <footer>
+    <a href="index.html">Home</a>
+    <a href="terms.html">Terms of service</a>
+  </footer>
+</main>
+</body>
+</html>

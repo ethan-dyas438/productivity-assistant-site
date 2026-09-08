@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Assistant</title>
+<style>
+  :root {
+    --bg: #fdfdfc;
+    --fg: #1c1b1a;
+    --muted: #57534e;
+    --rule: #e7e5e4;
+    --link: #2563eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1b1a;
+      --fg: #f5f4f2;
+      --muted: #a8a29e;
+      --rule: #3a3735;
+      --link: #7ba7f5;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .4rem; letter-spacing: -.02em; }
+  .sub { color: var(--muted); margin: 0 0 2.5rem; }
+  h2 { font-size: 1.1rem; margin: 2.5rem 0 .6rem; letter-spacing: -.01em; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  a { color: var(--link); }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted); font-size: .9rem;
+  }
+  footer a { margin-right: 1.2rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Personal Assistant</h1>
+  <p class="sub">A private, single-user productivity assistant.</p>
+
+  <p>
+    Personal Assistant is a self-hosted application built and used by one person. It reads
+    its owner's Google Calendar and Google Tasks to answer questions about their schedule
+    and to produce a single daily summary — deliberately one summary a day rather than a
+    stream of notifications.
+  </p>
+
+  <p>
+    It is reached from an Apple Watch, which shows the daily summary and a few quick
+    read-only views, and from a phone or browser for longer conversations.
+  </p>
+
+  <h2>What it does with Google data</h2>
+  <ul>
+    <li>Reads calendar events to answer questions like "what's on tomorrow?" and to build the daily summary.</li>
+    <li>Reads tasks to show what is due.</li>
+    <li>Creates and completes tasks when the owner explicitly asks it to.</li>
+  </ul>
+  <p>
+    It does not read email, contacts, files, or photos, and does not request access to them.
+  </p>
+
+  <h2>Who it is for</h2>
+  <p>
+    Its owner, and nobody else. It is not a product, has no other users, is not offered as a
+    service, and is not accepting sign-ups. It runs entirely in its owner's own private
+    Amazon Web Services account.
+  </p>
+
+  <h2>How data is handled</h2>
+  <p>
+    Calendar and task data stays in the owner's own AWS account, encrypted at rest. Nothing
+    is sold, shared with third parties, or used for advertising, and the application
+    contains no analytics or tracking of any kind. The
+    <a href="privacy.html">privacy policy</a> describes this in full, including which
+    third-party services process data and how long it is kept.
+  </p>
+
+  <footer>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="terms.html">Terms of service</a>
+  </footer>
+</main>
+</body>
+</html>
