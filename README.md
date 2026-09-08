@@ -9,27 +9,26 @@ Deliberately a **separate public repository** from the assistant itself, which s
 private. Nothing here is sensitive; nothing here should ever reference infrastructure
 identifiers, endpoints, or account numbers.
 
-## Publishing
+## Published
 
-1. Create a public GitHub repository named `ethan-dyas438.github.io`.
-2. Push these files to its default branch.
-3. Settings → Pages → Source: deploy from branch, root.
-4. Wait for the first build, then confirm all three pages load.
+Served from the `productivity-assistant-site` project repository via GitHub Pages:
 
-Live at:
+- <https://ethan-dyas438.github.io/productivity-assistant-site/>
+- <https://ethan-dyas438.github.io/productivity-assistant-site/privacy.html>
+- <https://ethan-dyas438.github.io/productivity-assistant-site/terms.html>
 
-- `https://ethan-dyas438.github.io/`
-- `https://ethan-dyas438.github.io/privacy.html`
-- `https://ethan-dyas438.github.io/terms.html`
+All internal links are **relative** (`privacy.html`, not `/privacy.html`) so that the site
+works from a project subpath. Root-absolute links would break here — keep them relative.
 
 ## Then, in Google Cloud → Google Auth Platform → Branding
 
 - Authorized domain: `ethan-dyas438.github.io`
   (`github.io` is on the Public Suffix List, so the full hostname *is* the top private
-  domain — this is what Google's "must be a top private domain" validator wants.)
-- Application home page: `https://ethan-dyas438.github.io/`
-- Privacy policy: `https://ethan-dyas438.github.io/privacy.html`
-- Terms of service: `https://ethan-dyas438.github.io/terms.html`
+  domain — this is what Google's "must be a top private domain" validator wants. Google
+  authorizes domains, not paths, so the project subpath is irrelevant here.)
+- Application home page: `https://ethan-dyas438.github.io/productivity-assistant-site/`
+- Privacy policy: `https://ethan-dyas438.github.io/productivity-assistant-site/privacy.html`
+- Terms of service: `https://ethan-dyas438.github.io/productivity-assistant-site/terms.html`
 - **Leave the app logo empty** — uploading one triggers brand verification, which is
   exactly what we are avoiding.
 
